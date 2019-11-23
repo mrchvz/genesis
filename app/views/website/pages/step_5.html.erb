@@ -1,0 +1,112 @@
+<%= render 'website/partials/secondary_header_genesis' %>
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-3 sidabar'>
+      <%= render 'website/partials/wizard_explainer' %>
+    </div>
+
+    <div class='col-6 content'>
+      <form>
+        <h5 class='field'>
+          Email
+        </h5>
+        <div class="form-group">
+          <input name='email' type="email" class="form-control" placeholder="Email" required>
+        </div>
+        <h5 class='field'>
+          Phone Number
+        </h5>
+        <div class="form-group">
+          <input name='telephone' type="tel" class="form-control" placeholder="+1 (619) 165 1588" required>
+        </div>
+        <h5 class='field'>
+          Legal Name
+        </h5>
+        <div class="form-group">
+          <input name='name' type="text" class="form-control" placeholder="Name" required>
+        </div>
+        <h5 class='field'>
+          Date of Birth
+        </h5>
+        <div class="form-group">
+          <input class="form-control" type="date" value="19-08-2011" id="example-date-input">
+        </div>
+        <h5 class='field'>
+          Country of Citeznship
+        </h5>
+        <select id="inputState" class="form-control">
+          <option selected>
+            United States
+          </option>
+          <option>
+            ...
+          </option>
+        </select>
+        <h5 class='field'>
+          Personal Address
+        </h5>
+        <div class="form-group">
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">
+              State
+            </label>
+            <select id="inputState" class="form-control">
+              <option selected>
+                United States
+              </option>
+              <option>
+                ...
+              </option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-row">
+            <h5 class='field'>
+              Title
+            </h5>
+            <div class="form-group col-md-4">
+              <input type="text" class="form-control" id="inputText">
+            </div>
+            <h5 class='field'>
+              Intended Percentage Ownership
+            </h5>
+            <div class="form-group col-md-2">
+              <input type="number" class="form-control" id="inputNumber">
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <a href='/'>
+            + Add a Founder
+          </a>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Back
+        </button>
+        <button type="submit" class="btn btn-primary">
+          Next
+        </button>
+        </form>
+      </div>
+
+    <div class='col-3 preview'>
+      <%= render 'website/partials/wizard_preview' %>
+    </div>
+  </div>
+</div>
+<%= render 'website/partials/secondary_footer_genesis' %>

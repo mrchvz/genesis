@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <%= render 'website/partials/announcements', phones: @phones %>
+</div>
+
+<div class="container-fluid billboard-wrapper">
+  <div class="row menu">
+    <div class='container'>
+      <%= render 'website/partials/primary_header', current_organization: @current_organization, treatments: @treatments %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-8 posts">
+      <div class="row">
+        <% @posts.each do |post| %>
+          <div class="col-12 post">
+            <img src="<%= post.primary_image.payload.url%>" alt="<%= post.primary_image.title %>" class='picture'>
+            <h4><%= post.title %></h4>
+            <p><%= post.published_at %></p>
+            <%= raw(post.content) %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-4 right-bar">
+      <div class="row">
+        <div class="col-12 talk-with-us">
+          <%= render 'website/partials/talk_with_us' %>
+        </div>
+        <div class="col-12 archive">
+          <h5>Blog Archive</h5>
+          <ul class='year'>
+            <% @archive.each do |year, properties| %>
+              <li>
+                <%= year %> (<%= properties.fetch(:count) %>)
+                <ul>
+                  <% properties.fetch(:months).each do |month, properties| %>
+                    <li><%= month %> (<%= properties.fetch(:count) %>)</li>
+                  <% end %>
+                </ul>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="col-12 popular">
+          <h5>Popular Posts</h5>
+          <img data-src="holder.js/300x100" alt="">
+          <p>10 Reasons to Get Dental Work in Tijuana</p>
+          <img data-src="holder.js/300x100" alt="">
+          <p>10 Tips for Your Next Dental Mexican Vacation</p>
+          <img data-src="holder.js/300x100" alt="">
+          <p>5 Habits That Cause Crooked Teeth</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'website/partials/schedule_now' %>
+
+<%= render 'website/partials/primary_footer', phones: @phones, current_organization: @current_organization %>

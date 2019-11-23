@@ -1,0 +1,63 @@
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2310782072497636');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2310782072497636&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+<div class="container-fluid">
+  <%= render 'website/partials/announcements', phones: @phones %>
+</div>
+<div class="container-fluid billboard-wrapper">
+  <div class="row menu">
+    <div class='container'>
+      <%= render 'website/partials/primary_header', current_organization: @current_organization, treatments: @treatments %>
+    </div>
+  </div>
+
+  <div class="row billboard d-flex">
+    <div class='container align-self-center'>
+      <div class='row'>
+        <div class="col-6 video">
+          <iframe src="<%= @treatment.url %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+        <div class="col-6 talk-with-us-wrapper">
+          <%= render 'website/partials/talk_with_us' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="attention-helper">
+
+<div class="container treatment">
+  <div class="row">
+    <div class="col-12">
+      <h4><%= @treatment.name %></h4>
+      <%= raw(@treatment.long_description) %>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <%= render 'website/partials/internal_testimonials', internal_testimonials: @internal_testimonials %>
+  <%= render 'website/partials/external_testimonials', external_testimonials: @external_testimonials %>
+</div>
+
+<%= render 'website/partials/schedule_now' %>
+
+<%= render 'website/partials/we_are_waiting_for_you' %>
+
+<%= render 'website/partials/primary_footer', phones: @phones, current_organization: @current_organization %>

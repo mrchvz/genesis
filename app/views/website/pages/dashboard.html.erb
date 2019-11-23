@@ -1,0 +1,111 @@
+<%= render 'website/partials/secondary_header_genesis' %>
+<div class='container wrapper-dashboard'>
+  <div class='row processes'>
+    <div class='col-12'>
+      <h2 class='title'>
+        Processes
+      </h2>
+      <a href='/step_1'>
+        New Process
+      </a>
+      <h4 class='text'>
+        Quicklinks
+      </h4>
+    </div>
+  </div>
+  <div class='row processes-map'>
+    <div class='col-3'>
+      <%= image_tag 'california.svg', class:'map'%>
+    </div>
+    <div class='col-3'>
+      <%= image_tag 'delaware.svg', class:'map'%>
+    </div>
+    <div class='col-3'>
+      <%= image_tag 'mexico.svg', class:'map'%>
+    </div>
+    <div class='col-3'>
+      <%= image_tag 'binational.svg', class:'map'%>
+    </div>
+  </div>
+  <div class='row processes-map'>
+    <div class='col-3'>
+      <h5 class='location text-center'>
+        California Incorporation
+      </h5>
+    </div>
+    <div class='col-3'>
+      <h5 class='location text-center'>
+        Delaware Incorporation
+      </h5>
+    </div>
+    <div class='col-3'>
+      <h5 class='location text-center'>
+        Mexico Incorporation
+      </h5>
+    </div>
+    <div class='col-3'>
+      <h5 class='location text-center'>
+        Binational Incorporation
+      </h5>
+    </div>
+  </div>
+
+  <div class='col-12 processes-in-process'>
+    <h4 class='subtitle'>
+      Processes in Process
+    </h4>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Incorporation</th>
+        <th scope="col">ID</th>
+        <th scope="col">Created Date</th>
+        <th scope="col">Status</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><%= image_tag 'folder.svg', class:'image'%>Delaware Incorporation</th>
+        <td>2-002</td>
+        <td>04/11/19</td>
+        <td><%= image_tag 'complete.svg', class:'image'%> Complete</td>
+        <td><%= image_tag 'edit.svg', class:'image'%></td>
+        <td><%= image_tag 'view.svg', class:'image'%></td>
+        <td><%= image_tag 'print.svg', class:'image'%></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= image_tag 'folder.svg', class:'image'%>Binational Incorporation</th>
+        <td>4-001</td>
+        <td>04/11/19</td>
+        <td><%= image_tag 'complete.svg', class:'image'%> Complete</td>
+        <td><%= image_tag 'edit.svg', class:'image'%></td>
+        <td><%= image_tag 'view.svg', class:'image'%></td>
+        <td><%= image_tag 'print.svg', class:'image'%></td>
+
+      </tr>
+      <tr>
+        <th scope="row"><%= image_tag 'folder.svg', class:'image'%>Delaware Incorporation</th>
+        <td>2-003</td>
+        <td>04/11/19</td>
+        <td><%= image_tag 'complete.svg', class:'image'%> Complete</td>
+        <td><%= image_tag 'edit.svg', class:'image'%></td>
+        <td><%= image_tag 'view.svg', class:'image'%></td>
+        <td><%= image_tag 'print.svg', class:'image'%></td>
+      </tr>
+      <tr>
+        <th scope="row"><%= image_tag 'folder.svg', class:'image'%>Mexico Incorporation</th>
+        <td>3-001</td>
+        <td>04/11/19</td>
+        <td><%= image_tag 'incomplete.svg', class:'image'%> Incomplete</td>
+        <td><%= image_tag 'edit.svg', class:'image'%></td>
+        <td><%= image_tag 'view.svg', class:'image'%></td>
+        <td><%= image_tag 'print.svg', class:'image'%></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<%= render 'website/partials/secondary_footer_genesis' %>

@@ -1,0 +1,33 @@
+<div class="container-fluid schedule-now-wrapper">
+  <div class='row'>
+    <div class='container'>
+      <div class='row schedule-now'>
+        <div class='col-12'>
+          <h4 class='title text-center'>Become Our Patient And Save Up To 70%</h4>
+          <h5 class='suggester text-center'>Get High Quality Dental Care At Affordable Prices</h5>
+        </div>
+        <div class='col-12'>
+          <%= form_tag(controller: :operations, action: :schedule, method: :post) do %>
+            <div class='form-row'>
+              <div class='form-group col'>
+                <input name='person_name' type='text' class='form-control name' placeholder='Your Name' required=''>
+              </div>
+              <div class='form-group col'>
+                <input name='email_address' type='email' class='form-control email' placeholder='Your Email' required=''>
+              </div>
+              <div class='form-group col'>
+                <input name='phone_number' type='phone' class='form-control phone' placeholder='(619) 000-0000' required=''>
+              </div>
+              <div class='form-group col'>
+                <input name='lead_desired_date' type='Date' class='form-control date' placeholder='Desired Date' required=''>
+              </div>
+              <div class='form-group col'>
+                <button type='submit' class='btn btn-primary button'>Book Now</button>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

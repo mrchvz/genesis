@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <%= render 'website/partials/announcements', phones: @phones %>
+</div>
+
+<div class="container-fluid billboard-wrapper">
+  <div class="row menu">
+    <div class='container'>
+      <%= render 'website/partials/primary_header', current_organization: @current_organization, treatments: @treatments %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <% @treatments.each_with_index do |treatment, index| %>
+    <div class="row">
+      <% if index % 2 == 0 %>
+        <div class="col-5">
+          <iframe src="<%= treatment.url %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      <% end %>
+
+      <div class="col-7">
+        <h3><%= treatment.name %></h3>
+        <p><%= treatment.short_description %></p>
+      </div>
+
+      <% if index % 2 == 1 %>
+        <div class="col-5">
+          <iframe src="<%= treatment.url %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'website/partials/schedule_now' %>
+
+<%= render 'website/partials/primary_footer', phones: @phones, current_organization: @current_organization %>

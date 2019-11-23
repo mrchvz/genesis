@@ -1,0 +1,104 @@
+<div class="container-fluid">
+  <%= render 'website/partials/announcements', phones: @phones %>
+</div>
+
+<div class="container-fluid billboard-wrapper">
+  <div class="row menu">
+    <div class='container'>
+      <%= render 'website/partials/primary_header', current_organization: @current_organization, treatments: @treatments %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <div class="row">
+        <div class="col-12">
+          <img data-src="holder.js/700x400" alt="">
+            <h4>10 Tips for Your Next Mexican Dental Vacation</h4>
+            <p>July 9th, 2018</p>
+            <p>The quality and affordability of dental care brings many American to Tijuana, Mexico.
+              If you’re planning a dental vacation in Tijuana, these tips will surely give you lots of benefits:
+            </p>
+            <dl>
+            <dd>1. Find a reliable clinic in Tijuana
+              In order to help you find a reliable clinic in Tijuana, browse Dental Departures’ website.
+              See various clinic photos, dentist profiles, schedule of clinic hours as wells as real reviews from international patients.
+              Checkout the prices and get exclusive discounts!
+            </dd>
+            <dd>2. Look for the best dentist in Tijuana
+              Look for the best dentist in Tijuana. Check their qualifications, skills, and specializations.
+              It’s important to know that the dentists in Tijuana are on par with their counterparts in the US, Canada, and UK, which is why they are trusted by Americans to handle their oral care.
+              In fact, the specialist in root canal Advanced Smiles Dentistry is affiliated with the American Association of Endodontics and European Association of Endodontics.
+              The dentists in Tijuana specialize in different fields such as Restorative Treatments, Endodontics (root canals), Oral Surgery, including dental implants.
+            </dd>
+            <dd>3. Know the types of dental services
+              Know the types of services offered by the clinics.
+              Check if they provide the treatments that you need.
+              Clinics in Tijuana offer preventive care such teeth cleaning to specialized treatment like Gum Care, Root Canal Therapy, Oral Surgery, and Cosmetic Dentistry like laser teeth whitening crowns, veneers, and dentures.
+            </dd>
+            <dd>4. Check the environment
+              Check the facilities including the types of equipment.
+              Dental clinics in Tijuana provide modern, comfortable, and friendly atmosphere.
+              The clinics utilize hi-tech equipment like CAD/CAM technology that process same day crowns and veneers.
+              Advanced Smiles Dentistry uses this ultramodern equipment, which enables them to produce impressive dental restorations in a short period.
+            </dd>
+            <dd>5. Talk to your dentist
+              During your consultation, feel free to talk to the dentist about your concerns.
+              Their exposure in global setting helps them to understand patients from abroad.
+              For example, the head dentist at Dr. Dalia Dental Care has been serving patients from the USA, Mexico, Europe, Asia, and other countries for more than 30 years.
+            </dd>
+            <dd>6. Compare the cost of treatment
+              Prices of treatment in Tijuana are lower compared to your home country. For example,
+              Laser Teeth Whitening in Tijuana costs around USD $150 (CAD $202, £117) compared to the US which is USD $496 (CAD $669, UK £388).
+            </dd>
+            <dd>7. Choose a nice accommodation
+              Choose a nice accommodation that is accessible to the clinic so you can easily attend your dental appointment.
+              Tijuana offers a variety of accommodation options ranging from budget hotels for backpackers, vacation houses to high-end hotels.
+            </dd>
+            <dd>8. Taste authentic Mexican food
+              Savor authentic Mexican food from tacos and nachos sold in street stalls to find dining restaurants serving local as well as international dishes.
+            </dd>
+              <dd>9. Chill out
+              Chill out, enjoy sightseeing or you can even explore the Playas de Tijuana (beaches of Tijuana), which is the westernmost borough of the city.
+            </dd>
+              <dd>10 .Take care of you newly restored teeth
+              Take care of your newly restored teeth especially when chewing sumptuous Mexican dishes.
+              Chill out and enjoy your dental vacation in Tijuana!
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="row">
+        <div class="col-12">
+          <%= render 'website/partials/talk_with_us' %>
+        </div>
+        <div class="col-12 blog-archive">
+          <h5>Blog Archive</h5>
+          <details>
+            <summary>2018(28)</summary>
+              <li>July(6)</li>
+              <li>June(12)</li>
+              <li>May(5)</li>
+              <li>April(5)</li>
+          </details>
+        </div>
+        <div class="col-12">
+          <h5>Popular Posts</h5>
+          <img data-src="holder.js/300x100" alt="">
+          <p>10 Reasons to Get Dental Work in Tijuana</p>
+          <img data-src="holder.js/300x100" alt="">
+          <p>10 Tips for Your Next Dental Mexican Vacation</p>
+          <img data-src="holder.js/300x100" alt="">
+          <p>5 Habits That Cause Crooked Teeth</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'website/partials/primary_footer', phones: @phones, current_organization: @current_organization %>

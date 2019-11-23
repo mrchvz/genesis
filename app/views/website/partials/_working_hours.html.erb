@@ -1,0 +1,48 @@
+<div class="row working-hours">
+  <div class="col-12">
+    <h4 class='text-center title'>Working Hours</h4>
+  </div>
+  <div class='col-12'>
+    <div class='row days-time-ranges-wrapper'>
+      <div class="col-5">
+        <ul class='days'>
+          <li class='day'>Monday</li>
+          <li class='day'>Tuesday</li>
+          <li class='day'>Wednesday</li>
+          <li class='day'>Thursday</li>
+          <li class='day'>Friday</li>
+          <li class='day'>Saturday</li>
+          <li class='day'>Sunday</li>
+        </ul>
+      </div>
+      <div class="col-7">
+        <ul class='time-ranges'>
+          <li class='time-range'>9:00AM-6:00PM</li>
+          <li class='time-range'>9:00AM-6:00PM</li>
+          <li class='time-range'>9:00AM-6:00PM</li>
+          <li class='time-range'>9:00AM-6:00PM</li>
+          <li class='time-range'>9:00AM-6:00PM</li>
+          <li class='time-range'>9:00AM-3:00PM</li>
+          <li class='time-range'>Closed</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <ul class='phones text-center'>
+      <% phones.each do |phone| %>
+        <li class='phone'>
+          <img class="flag" src="/assets/<%= phone.country_code %>.svg" alt="<%= phone.country_code %> Flag">
+          <a class="number" href="tel:<%= phone.calculated_full_number %>"><%= phone.calculated_full_number %></a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="col-12">
+    <ul class='email-addresses'>
+      <li class='email-address'>
+        <a class="email d-block text-center" href="mailto:info@tijuanasmiledentistry.com">info@tijuanasmiledentistry.com</a>
+      </li>
+    </ul>
+  </div>
+</div>

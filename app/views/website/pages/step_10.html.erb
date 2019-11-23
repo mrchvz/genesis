@@ -1,0 +1,51 @@
+<%= render 'website/partials/secondary_header_genesis' %>
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-3 sidabar'>w
+      <%= render 'website/partials/wizard_explainer' %>
+    </div>
+
+    <div class='col-6 content'>
+      <h5 class='field'>
+        Now we just need to finalize the details! How fast do you need to file?
+      </h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Fast! Give me the rush filing.
+        </label>
+        <h6 class='price'>
+          $299.99 USD
+        </h6>
+        <p class='explainer'>
+          You will receive electronic copies of your documents in 1-2 business days.
+          Cost includes government fees and a rush filing fee.
+          Additional time for mailing of documents may apply.
+        </p>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+          No rush, I’ll just pay the goverment fees.
+        </label>
+        <h6 class='price'>
+          $99.99 USD
+        </h6>
+        <p class='explainer'>
+          Standard processing time in Delaware is 5-7 business days.
+          Cost includes the required state filing fee and courier processing.
+        </p>
+      </div>
+      <button type="submit" class="btn btn-primary">
+        Back
+      </button>
+      <button type="submit" class="btn btn-primary">
+        Next
+      </button>
+    </div>
+    <div class='col-3 preview'>
+      <%= render 'website/partials/wizard_preview' %>
+    </div>
+  </div>
+</div>
+<%= render 'website/partials/secondary_footer_genesis' %>

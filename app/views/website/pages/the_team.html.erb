@@ -1,0 +1,100 @@
+<div class="container-fluid">
+  <%= render 'website/partials/announcements', phones: @phones %>
+</div>
+<div class='container'>
+  <%= render 'website/partials/primary_header', current_organization: @current_organization, treatments: @treatments %>
+</div>
+
+
+<div class="container primary-dentists">
+  <% @primary_producers.each_with_index do |producer, index| %>
+    <div class="row primary-dentist">
+      <% if index % 2 == 0 %>
+        <div class="col-6 image">
+          <img src="<%= producer.primary_image.payload.url %>" alt="<%= producer.name %>" class="picture">
+        </div>
+      <% end %>
+      <div class="col-6 texts">
+        <h4><%= producer.name %></h4>
+        <%= raw(producer.biography) %>
+      </div>
+      <% if index % 2 == 1 %>
+        <div class="col-6 image">
+          <img src="<%= producer.primary_image.payload.url %>" alt="<%= producer.name %>" class="picture">
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+<hr class="attention-helper">
+
+<div class="container steps">
+  <div class="row">
+    <div class="col-12 texts">
+      <h4>Our Process</h4>
+      <h5>Our Facilities Are Design To Make You Feel Safe and Happy</h5>
+    </div>
+    <div class="col-12">
+      <div class="row">
+        <%# TODO - Make dynamic %>
+        <%# @steps.each do |step| %>
+          <!-- <div class="col-3 step">
+            <img src="/assets/tijuana-smile-dentistry-01.jpg" alt="Baja Smile Dentistry" class="picture">
+          </div> -->
+        <%# end %>
+        <div class="col-3 step">
+          <img src="/assets/baja-smile-dentistry-01.jpg" alt="Baja Smile Dentistry" class="picture">
+        </div>
+        <div class="col-3 step">
+          <img src="/assets/baja-smile-dentistry-02.jpg" alt="Baja Smile Dentistry" class="picture">
+        </div>
+        <div class="col-3 step">
+          <img src="/assets/baja-smile-dentistry-03.jpg" alt="Baja Smile Dentistry" class="picture">
+        </div>
+        <div class="col-3 step">
+          <img src="/assets/baja-smile-dentistry-04.jpg" alt="Baja Smile Dentistry" class="picture">
+        </div>
+        <div class="col-3 step">
+          <img src="/assets/baja-smile-dentistry-05.jpg" alt="Baja Smile Dentistry" class="picture">
+        </div>
+        <div class="col-3 step">
+          <img src="/assets/baja-smile-dentistry-06.jpg" alt="Baja Smile Dentistry" class="picture">
+        </div>
+        <div class="col-3 step">
+          <img src="/assets/baja-smile-dentistry-07.jpg" alt="Baja Smile Dentistry" class="picture">
+        </div>
+        <div class="col-3 step">
+          <img src="/assets/baja-smile-dentistry-08.jpg" alt="Baja Smile Dentistry" class="picture">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'website/partials/schedule_now' %>
+
+<hr class="attention-helper">
+
+<div class="container secondary-dentists">
+  <div class="row">
+    <div class="col-12 texts">
+      <h4>Our Team</h4>
+      <h5>We Are Here To Give Care To Your Smile</h5>
+    </div>
+    <div class="row image">
+      <% @secondary_producers.each do |producer| %>
+        <div class="col-3 secondary-dentist">
+          <img src="<%= producer.primary_image.payload.url %>" alt="<%= producer.name %>" class="rounded-circle picture">
+          <p><%= producer.name %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <%= render 'website/partials/external_testimonials', external_testimonials: @external_testimonials %>
+</div>
+
+<%= render 'website/partials/primary_footer', phones: @phones, current_organization: @current_organization %>

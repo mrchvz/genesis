@@ -1,0 +1,69 @@
+<%= render 'website/partials/secondary_header_genesis' %>
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-3 sidabar'>
+      <%= render 'website/partials/wizard_explainer' %>
+    </div>
+
+    <div class='col-6 content'>
+      <form>
+        <h5 class='field'>
+          Incorporator
+        </h5>
+        <select id="inputState" class="form-control">
+          <option selected>
+            Name
+          </option>
+          <option>
+            Name #2
+          </option>
+        </select>
+        <h5 class='field'>
+          Director
+        </h5>
+        <select id="inputState" class="form-control">
+          <option selected>
+            Name
+          </option>
+          <option>
+            Name #2
+          </option>
+        </select>
+        <h5 class='field'>
+          President
+        </h5>
+        <select id="inputState" class="form-control">
+          <option selected>
+            Name
+          </option>
+          <option>
+            Name #2
+          </option>
+        </select>
+        <h5 class='field'>
+          Secretary
+        </h5>
+        <select id="inputState" class="form-control">
+          <option selected>
+            Name
+          </option>
+          <option>
+            Name #2
+          </option>
+        </select>
+        <button type="submit" class="btn btn-primary">
+          Back
+        </button>
+        <button type="submit" class="btn btn-primary">
+          Next
+        </button>
+      </form>
+    </div>
+
+
+    <div class='col-3 preview'>
+      <%= render 'website/partials/wizard_preview' %>
+    </div>
+  </div>
+</div>
+<%= render 'website/partials/secondary_footer_genesis' %>

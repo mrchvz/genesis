@@ -1,0 +1,25 @@
+<% if social_proofs.any? %>
+  <div class="row social-proofs-wrapper">
+    <div class="col-12">
+      <hr class="attention-helper">
+      <h2 class='title text-center'>What Others Are Saying</h2>
+      <h4 class='suggester text-center'>We have been featured in newspapers, blogs and magazines</h4>
+    </div>
+
+    <div class='col-12'>
+      <div class='row social-proofs justify-content-center'>
+        <% social_proofs.each do |social_proof| %>
+          <div class="col-3 social-proof">
+            <a target='_blank' href="<%= social_proof.url %>">
+              <img
+                class='image'
+                src="<%= social_proof&.primary_image&.payload&.url %>"
+                alt="<%= social_proof&.primary_image&.description %>"
+                >
+            </a>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

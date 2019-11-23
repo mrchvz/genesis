@@ -1,0 +1,182 @@
+<div class="container-fluid">
+  <%= render 'website/partials/announcements', phones: @phones %>
+</div>
+<div class="row menu">
+  <div class='container'>
+    <%= render 'website/partials/primary_header', current_organization: @current_organization, treatments: @treatments %>
+  </div>
+</div>
+
+<div class="container prices">
+  <div class="row">
+    <div class="col-12 title">
+      <h4>Price List</h4>
+      <h5>You Can Save Up To 70% With Our Prices </h5>
+    </div>
+    <div class="col-8 items">
+      <% @categories.each do |category| %>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" colspan="6">
+                <h5><%= category.name %> - <%= category.short_description %></h5></th>
+            </tr>
+          </thead>
+          <thead>
+            <tr>
+              <th scope="col">Item</th>
+              <th scope="col">Info</th>
+              <th scope="col">USA</th>
+              <th scope="col">TSD</th>
+              <th scope="col">You Save</th>
+              <th scope="col">Add</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% category.items.each do |item| %>
+              <tr class='item' data-key='<%= item.key %>'>
+                <td class='name' data-name='<%= item.name %>'><%= item.name %></td>
+                <td class='information'>
+                  <a href='#'>
+                    <img class='info' src="./assets/info.png" alt="" />
+                  </a>
+                </td>
+                <td class='external-price-in-cents'>$<%= item.external_price_in_cents / 100 %></td>
+                <td class='internal-price-in-cents' data-price="<%= item.internal_price_in_cents / 100 %>">$<%= item.internal_price_in_cents / 100 %></td>
+                <td class='savings-percentage'><%= (((item.external_price_in_cents.to_f - item.internal_price_in_cents.to_f) / item.external_price_in_cents.to_f)*100).to_i %>%</td>
+                <td class='add-to-cart'>
+                  <a href='#'>
+                    <img class='add-to-cart' src="./assets/shop.png" alt="" />
+                  </a>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% end %>
+    </div>
+    <div class="col-4 shopping-cart">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" colspan="7" class='text-center'>
+              <h5>Shopping Cart</h5>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr class='cart-item' data-key="KEY">
+            <td colspan='3' class='name'>Algsdfsfsadsdsdo</td>
+            <td colspan='1' class='quantity'>100</td>
+            <td colspan='1' class='add'>
+              <button>+</button>
+            </td>
+            <td colspan='1' class='quantity'>
+              <input type="text" value="1" />
+            </td>
+            <td colspan='1' class='substract'>
+              <button>-</button>
+            </td>
+          </tr> -->
+          <tr class='total'>
+            <td colspan='7' class='text-right total'>Total: $0 USD</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-primary btn-lg btn-block" type="submit">Schedule Appointment</button>
+    </div>
+  </div>
+</div>
+
+<%= render 'website/partials/primary_footer', phones: @phones, current_organization: @current_organization %>
+
+<script>
+  $(".item .add-to-cart a").on("click", function(event){
+    event.preventDefault();
+
+    var itemElement = this.parentElement.parentElement;
+    var name = itemElement.querySelector(".name").dataset.name;
+    var price = itemElement.querySelector(".internal-price-in-cents").dataset.price;
+    var key = itemElement.dataset.key;
+
+    var tableElement = document.querySelector(".shopping-cart table");
+    var tableBodyElement = tableElement.querySelector("tbody");
+    var cartItems = tableBodyElement.querySelectorAll("tr");
+    var cartItemKeys = Array.from(cartItems).map(element => element.dataset.key);
+    var existingCartItemIndex = cartItemKeys.indexOf(key);
+
+    if (existingCartItemIndex >= 0) {
+      var cartItemElement = cartItems[existingCartItemIndex];
+      var existingQuantityElement = cartItemElement.querySelector(".quantity input");
+      var existingQuantity = parseInt(existingQuantityElement.getAttribute('value'));
+      existingQuantityElement.setAttribute('value', existingQuantity+1);
+      return;
+    }
+
+    var newRowElement = document.createElement("tr");
+    newRowElement.setAttribute("data-key", key);
+
+    var rowDataNameElement = document.createElement("td");
+    rowDataNameElement.setAttribute('colspan', '3');
+    rowDataNameElement.setAttribute('class', 'name');
+    rowDataNameElement.innerHTML = name;
+
+    var rowDataPriceElement = document.createElement("td");
+    rowDataPriceElement.setAttribute('colspan', '1');
+    rowDataPriceElement.setAttribute('class', 'price');
+    rowDataPriceElement.innerHTML = `$ ${price}`;
+
+    var rowDataAddButtonElement = document.createElement("td");
+    rowDataAddButtonElement.setAttribute('colspan', '1');
+    rowDataAddButtonElement.setAttribute('class', 'add');
+    var rowDataAddButtonButtonElement = document.createElement("button");
+    rowDataAddButtonButtonElement.innerHTML = '+';
+    rowDataAddButtonElement.appendChild(rowDataAddButtonButtonElement);
+
+    $(rowDataAddButtonButtonElement).on('click', function(event){
+      var cartItemElement = this.parentElement.parentElement;
+      var existingQuantityElement = cartItemElement.querySelector(".quantity input");
+      var existingQuantity = parseInt(existingQuantityElement.getAttribute('value'));
+      existingQuantityElement.setAttribute('value', existingQuantity+1);
+    });
+
+    var rowDataQuantityElement = document.createElement("td");
+    rowDataQuantityElement.setAttribute('colspan', '1');
+    rowDataQuantityElement.setAttribute('class', 'quantity');
+    var rowDataQuantityInputElement = document.createElement("input");
+    rowDataQuantityInputElement.setAttribute('type', 'text');
+    rowDataQuantityInputElement.setAttribute('value', '1');
+    rowDataQuantityElement.appendChild(rowDataQuantityInputElement);
+
+    var rowDataSubstractButtonElement = document.createElement("td");
+    rowDataSubstractButtonElement.setAttribute('colspan', '1');
+    rowDataSubstractButtonElement.setAttribute('class', 'substract');
+    var rowDataSubstractButtonButtonElement = document.createElement("button");
+    rowDataSubstractButtonButtonElement.innerHTML = '-';
+    rowDataSubstractButtonElement.appendChild(rowDataSubstractButtonButtonElement);
+
+    $(rowDataSubstractButtonButtonElement).on('click', function(event){
+      var cartItemElement = this.parentElement.parentElement;
+      var existingQuantityElement = cartItemElement.querySelector(".quantity input");
+      var existingQuantity = parseInt(existingQuantityElement.getAttribute('value'));
+      var newQuantity = existingQuantity-1;
+
+      if (newQuantity === 0) {
+        cartItemElement.parentElement.removeChild(cartItemElement);
+        return;
+      }
+
+      existingQuantityElement.setAttribute('value', newQuantity);
+    });
+
+    newRowElement.appendChild(rowDataNameElement);
+    newRowElement.appendChild(rowDataPriceElement);
+    newRowElement.appendChild(rowDataAddButtonElement);
+    newRowElement.appendChild(rowDataQuantityElement);
+    newRowElement.appendChild(rowDataSubstractButtonElement);
+
+    var tableBodyTotalElement = tableBodyElement.querySelector(".total");
+
+    tableBodyElement.insertBefore(newRowElement, tableBodyTotalElement);
+  })
+</script>

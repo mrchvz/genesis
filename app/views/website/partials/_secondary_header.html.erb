@@ -1,0 +1,9 @@
+<nav class="navbar navbar-expand-md primary-header">
+  <a class="navbar-brand brand" href="/">
+    <% if current_organization.primary_image %>
+      <img class='logo' src="<%= current_organization.primary_image.payload.url %>" alt="<%= current_organization.name %> Logo">
+    <% else %>
+      <p class='name' ><%= current_organization.name %></p>
+    <% end %>
+  </a>
+</nav>

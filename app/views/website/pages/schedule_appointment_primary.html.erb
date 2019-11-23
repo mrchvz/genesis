@@ -1,0 +1,51 @@
+<div class="container-fluid billboard-wrapper">
+  <div class="row menu">
+    <div class='container'>
+      <%= render 'website/partials/secondary_header', current_organization: @current_organization %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="form-row">
+    <div class="col-8">
+      <h2>
+        <p>Schedule Appointment</p>
+      </h2>
+      <form class="needs-validation" novalidate="">
+        <label for="Date">Appointment Date</label>
+        <input type="date" class="form-control" id="date" placeholder="">
+        <div class="invalid-feedback">
+          Please enter your Appointment Date.
+        </div>
+        <label for="time">Appointment Time</label>
+        <input type="Time" class="form-control" id="time" placeholder="" required="">
+        <div class="invalid-feedback">
+          Please enter your Appointment Time
+        </div>
+        <label for="exampleFormControlSelect1">Treatment</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>Regular teeth cleaning</option>
+          <option>LANA (per quadrant)</option>
+          <option>Laser Cleaning</option>
+          <option>Laser Teeth Whitening</option>
+          <option>Teeth Whitening</option>
+          <option>Composite Filling</option>
+          <option>Extraction (simple)</option>
+          <option>Extraction (surgical or impacted)</option>
+          <option>Porcelain Fused to Metal Crown</option>
+          <option>Porcelain Fused to Metal Bridge</option>
+          <option>Porcelain Fusted to Gold Crown</option>
+          <option>Full Porcelain / Ceramic Crown</option>
+          <option>Zirconia Crown</option>
+          <option>Porcelain Veneer</option>
+        </select>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Next</button>
+      </form>
+    </div>
+    <div class="col-4">
+      <%= render 'website/partials/working_hours', phones: @phones %>
+    </div>
+  </div>
+</div>

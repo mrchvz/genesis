@@ -1,0 +1,33 @@
+<% if internal_testimonials.any? %>
+  <div class="row internal-testimonials">
+    <div class="col-12">
+      <hr class="attention-helper">
+      <h4 class='title text-center'>See It For Yourself: <%= internal_testimonials.count%>+ Of Success Stories</h4>
+      <h5 class='suggester text-center'>Our Clients Have Trusted Us With Their Smile</h5>
+    </div>
+
+    <% internal_testimonials.each_with_index do |internal_testimonial, index| %>
+      <% next unless index == 0 %>
+      <% next unless (internal_testimonial.before_image && internal_testimonial.after_image) || internal_testimonial.url %>
+
+      <div class='col-12 primary-internal-testimonial'>
+        <img class='image' src='<%= internal_testimonial.before_image.payload.url  %>' alt="<%= internal_testimonial.short_text %>" />
+        <p class='caption text-center'><%= internal_testimonial.short_text %></p>
+      </div>
+    <% end %>
+
+    <% if internal_testimonials.length > 1 %>
+      <div class="col-12 secondary-internal-testimonials">
+        <div class='row'>
+          <% internal_testimonials.each_with_index do |internal_testimonial, index| %>
+            <% next if index == 0 %>
+            <div class='col-3 secondary-internal-testimonial'>
+              <img class='image' src='<%= internal_testimonial.before_image.payload.url  %>' alt="<%= internal_testimonial.short_text %>" />
+              <p class='caption text-center'><%= internal_testimonial.short_text %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

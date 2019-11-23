@@ -1,0 +1,86 @@
+<% if external_testimonials.any? %>
+  <div class='row external-testimonials'>
+    <div class="col-12 texts">
+      <hr class="attention-helper">
+      <h4 class='title text-center'>What Our Patients Are Saying</h4>
+      <h5 class='suggester text-center'>Quality Dental Care At Affordable Prices, See It To Believe It</h5>
+    </div>
+
+    <% external_testimonials.each do |external_testimonial| %>
+      <div class="col-12 external-testimonial">
+        <div class="row">
+          <% if external_testimonial.url %>
+            <div class="col-6 video-wrapper">
+              <iframe
+                class='video'
+                src="<%= external_testimonial.url %>"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          <% elsif external_testimonial.images.any? %>
+            <div class="col-6 carousel-wrapper">
+              <% uuid = "carousel-#{SecureRandom.uuid}" %>
+              <div id="<%= uuid %>" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <% external_testimonial.images.each_with_index do |image, index| %>
+                    <li
+                      data-target="#<%= uuid %>"
+                      data-slide-to="<%= index %>"
+                      class="<%= index == 0 ? 'active': '' %>"
+                    ></li>
+                  <% end %>
+                </ol>
+                <div class="carousel-inner">
+                  <% external_testimonial.images.each_with_index do |image, index| %>
+                    <div class="carousel-item<%= index == 0 ? ' active' : ''%>">
+                      <img
+                        class="d-block w-100"
+                        src="<%= image.payload&.url %>"
+                        alt="<%= image.description %>"
+                      />
+                    </div>
+                  <% end %>
+                </div>
+
+                <a class="carousel-control-prev" href="#<%= uuid %>" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="carousel-control-next" href="#<%= uuid %>" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          <% end %>
+          <div class="col-6 texts">
+            <h5 class='name'>
+              <%= external_testimonial.person.name %>
+            </h5>
+            <p class='address'>
+              <%= external_testimonial.person.primary_address&.calculated_partial_address %>
+            </p>
+            <p class='rating'>
+              <% 5.times do |i| %>
+                <% if i < external_testimonial.rating %>
+                  <span class="oi oi-star star active" title="star active" aria-hidden="true"></span>
+                <% else %>
+                  <span class="oi oi-star star inactive" title="star inactive" aria-hidden="true"></span>
+                <% end %>
+              <% end %>
+              <span class='date'>
+                <%= time_tag external_testimonial.date %>
+              </span>
+            </p>
+            <p class='text'>
+              <%= external_testimonial.long_text[0..400] %>...
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

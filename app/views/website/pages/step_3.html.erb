@@ -1,0 +1,134 @@
+<%= render 'website/partials/secondary_header_genesis' %>
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-3 sidabar'>
+      <%= render 'website/partials/wizard_explainer' %>
+    </div>
+    <div class='col-6 content'>
+      <form>
+        <h5 class='field'>
+          Type of Company
+        </h5>
+        <div class="form-group">
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>
+              C Corporation
+            </option>
+            <option>
+              LLC
+            </option>
+          </select>
+        </div>
+        <h5 class='field'>
+          Is this a subsidiary of another company?
+        </h5>
+        <p class='explainer'>
+          A subsidiary is a company owned and controlled by another company.
+        </p>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+          <label class="form-check-label" for="exampleRadios1">
+            Yes
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <label class="form-check-label" for="exampleRadios2">
+            No
+          </label>
+        </div>
+        <h5 class='field'>
+          The parent company
+        </h5>
+        <p class='explainer'>
+          Share some information about the parent company that will own your new Delaware corporation.
+        </p>
+        <h5 class='field'>
+          Name
+        </h5>
+        <div class="form-group">
+          <input type="text" class="form-control" id="inputText" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
+        </div>
+        <h5 class='field'>
+          Funding
+        </h5>
+        <div class="form-group">
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>Venture Capital Investor</option>
+            <option>More</option>
+          </select>
+        </div>
+        <h5 class='field'>
+          Type of Company
+        </h5>
+        <div class="form-group">
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>C Corporation</option>
+            <option>More</option>
+          </select>
+        </div>
+        <h5 class='field'>
+          Business Address
+        </h5>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Address 2</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">
+              State
+            </label>
+            <select id="inputState" class="form-control">
+              <option selected>
+                Choose...
+              </option>
+              <option>
+                ...
+              </option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+        </div>
+        <h5 class='field'>
+          Tax Identifier Number
+        </h5>
+        <div class="form-group">
+          <input type="number" class="form-control" id="inputNumber" placeholder="45651310312313">
+        </div>
+        <h5 class='field'>
+          Company Registration
+        </h5>
+        <div class="input-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile04">
+            <label class="custom-file-label" for="inputGroupFile04">Choose a file to attach</label>
+          </div>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">Upload</button>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Back
+        </button>
+        <button type="submit" class="btn btn-primary">
+          Next
+        </button>
+      </form>
+    </div>
+    <div class='col-3 preview'>
+      <%= render 'website/partials/wizard_preview' %>
+    </div>
+  </div>
+  <%= render 'website/partials/secondary_footer_genesis' %>

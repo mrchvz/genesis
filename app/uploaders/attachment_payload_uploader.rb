@@ -1,0 +1,2 @@
+class AttachmentPayloadUploader < BaseUploader
+end

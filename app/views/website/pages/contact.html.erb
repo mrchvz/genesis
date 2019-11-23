@@ -1,0 +1,58 @@
+<%= render 'website/partials/header_genesis' %>
+<div class="container wrapper-contact-form">
+  <div class='row'>
+    <div class='col-12'>
+      <h2 class='text'>
+      We can help you incorporate your company
+      </h2>
+    </div>
+  </div>
+  <div class="row form-wrapper">
+    <div class="col-7 contact-form">
+      <form class='form' action="/submit_contact_form" method="post">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <div class="form-group">
+            <input name='name' type="text" class="form-control" placeholder="Name" required>
+          </div>
+          <div class="form-group">
+            <input name='email' type="email" class="form-control" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <input name='telephone' type="tel" class="form-control" placeholder="Phone" required>
+          </div>
+          <div class="form-group">
+            <input name='organization' type="text" class="form-control" placeholder="Company" required>
+          </div>
+          <div class="form-group">
+            <input name='message' type="text" class="form-control" placeholder="Message" required>
+          </div>
+          <div class="input-group">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile04">
+              <label class="custom-file-label" for="inputGroupFile04">Choose a file to attach</label>
+            </div>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Upload</button>
+            </div>
+          </div>
+        <button type="submit" class="btn btn-primary btn-block">Send</button>
+      </form>
+    </div>
+    <div class="col-5 contact-info">
+      <p class='title'>
+        Just give us a call or send us an e-mail and we’ll get on in ASAP!
+      </p>
+      <p class='info'>
+        <%= image_tag 'US.svg', class:'flags'%> +1 (858) 232-2375
+      </p>
+      <p class='info'>
+        <%= image_tag 'MX.svg', class:'flags'%> +52 (664) 634-6030
+      </p>
+      <p class='title'>
+        hello@usegenesis.com
+      </p>
+    </div>
+  </div>
+</div>
+
+<%= render 'website/partials/footer_genesis' %>

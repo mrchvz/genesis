@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <%= render 'website/partials/announcements', phones: @phones %>
+</div>
+
+<div class="container-fluid billboard-wrapper">
+  <div class="row menu">
+    <div class='container'>
+      <%= render 'website/partials/primary_header', current_organization: @current_organization, treatments: @treatments %>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3363.488671090393!2d-117.03261258394721!3d32.53980100334809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d948fe395bb897%3A0x2326d540e0c3b4a4!2s108%2C+V%C3%ADa+de+la+Juventud+Ote+8800%2C+Empleados+Federales%2C+22010+Tijuana%2C+B.C.!5e0!3m2!1sen!2smx!4v1549413741170" allowfullscreen></iframe>
+</div>
+
+<div class="container-fluid working-hours-wrapper">
+  <div class='row'>
+    <div class='container'>
+      <div class="row">
+        <div class="col-7">
+          <%= render 'website/partials/talk_with_us' %>
+        </div>
+        <div class="col-4 offset-1">
+          <%= render 'website/partials/working_hours', phones: @phones %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='container pictures align-self-center'>
+  <div class="row">
+    <div class='col-4'>
+      <img src="/assets/baja-smile-dentistry-014.jpg" class='picture'>
+    </div>
+    <div class='col-4'>
+      <img src="/assets/baja-smile-dentistry-015.jpg" class='picture'>
+    </div>
+    <div class='col-4'>
+      <img src="/assets/baja-smile-dentistry-016.jpg" class='picture'>
+    </div>
+  </div>
+</div>
+
+<%= render 'website/partials/primary_footer', phones: @phones, current_organization: @current_organization %>
