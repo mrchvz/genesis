@@ -1,12 +1,15 @@
-// @import "./open-iconic-bootstrap";
+@import "./open-iconic-bootstrap";
 $light-gray: #F0F0F0;
 $dark-gray: #212121;
 $blue-accent: #0081FD;
 $blue-medium: #3E67B1;
 $blue-sidebar: #2B426B;
 $blue-dark: #032840;
+$breath-size: 120px;
+
+
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:300,300i,400,400i|Source+Sans+Pro:400,400i,600,600i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 body {
   h1 {
@@ -55,13 +58,17 @@ body {
   ul, il {
     font-family: 'Muli';
   }
-  .title-product {
-    padding-top: 120px;
+
+  label {
+    font-family: 'Muli';
+    margin-bottom: 0px;
   }
-  .btn-primary {
+
+  .btn-primary, .btn-primary-wizard {
     background-color: $blue-medium;
     border: none;
     font-family: 'Muli';
+    color: white;
       &:hover {
         font-weight: bolder;
         text-decoration: none;
@@ -69,11 +76,16 @@ body {
         color: white;
     }
   }
+  .btn-primary-wizard {
+    margin: 30px 0px 30px 10px
+  }
   .form-control {
     background-color: $light-gray;
     border: none;
     font-family: 'Muli';
+
   }
+
 }
 .header-genesis {
   margin-bottom: 120px;
@@ -100,8 +112,8 @@ body {
 }
 .secondary-header-genesis {
   background: #1C1C1C;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   .image {
     width:25px;
     height:25px;
@@ -137,8 +149,8 @@ body {
   background-color: #1C1C1C;
   color: white;
   font-family: 'Muli';
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   .image {
     margin-left: 15px;
   }
@@ -146,14 +158,15 @@ body {
 .wizard-explainer {
   background-color: $blue-dark;
   color: white;
-  padding: 120px 20px;
-  // padding-bottom: 120px;
+  padding: $breath-size $breath-size/2;
+}
+.wizard-content {
+  padding: $breath-size $breath-size/2;
 }
 .wizard-preview {
   background-color: $light-gray;
-  color: white;
-  padding: 120px 20px;
-  // padding-bottom: 120px;
+  color: $dark-gray;
+  padding: $breath-size $breath-size/2;
 }
 
 .pages {
@@ -172,6 +185,7 @@ body {
         color: white;
         background-color: $blue-medium;
         border: none;
+        font-family: 'Muli';
       }
 
       .btn-primary {
@@ -232,8 +246,7 @@ body {
   }
   .dashboard {
     .location {
-      margin-top: 60px;
-      margin-bottom: 60px;
+      margin: $breath-size/2 Opx;
     }
     .map {
       align-items: center;
@@ -244,14 +257,89 @@ body {
       margin-right: 10pt;
     }
   }
-  .step_1 {
-    .content {
-      margin-left: 30%;
-      margin-right:30%;
-
+  .step-1 {
+    .wizard-content {
+      .disclaimer {
+        line-height: 1.5;
+        padding-bottom: $breath-size/3;
+      }
+      .btn-primary {
+        width: 20%;
+        margin: auto;
+        display: block;
+      }
     }
   }
-  .step_2 {
+  .step-3 {
+    .custom-file-label {
+      background-color: $light-gray;
+      border: none;
+      color: black;
+    }
+    .btn-outline-secondary {
+      color: white;
+      background-color: $blue-medium;
+      border: none;
+      font-family: 'Muli';
+    }
 
+    .btn-primary {
+      margin-top: 20px;
+    }
+  }
+  .step-10 {
+    .option {
+      color: $blue-medium;
+      font-weight: bold;
+    }
+
+
+
+  }
+  .step-11 {
+    .subtitle {
+      color: $blue-medium;
+      font-weight: bold;
+      margin-bottom: 0px;
+    }
+  }
+  .step-12 {
+    .title {
+      margin-bottom: $breath-size/4
+    }
+    .option {
+      color: $blue-medium;
+      font-weight: bold;
+      margin-bottom: 0px;
+    }
+  }
+  .step-14 {
+    .subtitle, .section {
+      color: $blue-medium;
+      font-weight: bold;
+      margin-bottom: 0px;
+    }
+    .explainer {
+      margin-bottom: 10px;
+    }
+    .section {
+      margin: 20px 0px;
+    }
+    .content {
+      .extra-services {
+        .subtitle {
+          color: $dark-gray;
+        }
+      }
+    }
+    .wizard-preview {
+      .summary-field {
+        margin-bottom: 0px;
+      }
+      .btn-primary {
+        margin: 20px auto;
+        width: 100%;
+      }
+    }
   }
 }

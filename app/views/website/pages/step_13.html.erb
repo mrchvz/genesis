@@ -2,13 +2,11 @@
 <div class='container-fluid'>
   <div class='row'>
     <div class='col-3 sidabar'>
-      <%= render 'website/partials/wizard_explainer' %>
     </div>
-
-  <div class='col-6 content'>
-    <h2 class='title'>
+  <div class='col-6 wizard-content'>
+    <h3 class='title'>
       Checkout
-    </h2>
+    </h3>
     <h4 class='title'>
       Billing Information
     </h4>
@@ -21,7 +19,7 @@
     </div>
     <form>
       <div class="row">
-        <div class="col-md-6 mb-3">
+        <div class="col-12">
           <label for="cc-name">Name on Card</label>
           <input type="text" class="form-control" id="cc-name" placeholder="" required>
           <small class="text-muted">Full name as displayed on card</small>
@@ -29,7 +27,7 @@
             Name on Card
           </div>
         </div>
-        <div class="col-md-6 mb-3">
+        <div class="col-12">
           <label for="cc-number">Credit Card Number</label>
           <input type="text" class="form-control" id="cc-number" placeholder="" required>
           <div class="invalid-feedback">
@@ -53,16 +51,15 @@
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">
+      <button type="submit" class="btn btn-primary-wizard float-right">
         Back
       </button>
-      <button type="submit" class="btn btn-primary">
+      <button type="submit" class="btn btn-primary-wizard float-right">
         Next
       </button>
       </form>
     </div>
     <div class='col-3 preview'>
-      <%= render 'website/partials/wizard_preview' %>
     </div>
   </div>
 </div>

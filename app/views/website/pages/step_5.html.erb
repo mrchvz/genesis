@@ -5,7 +5,10 @@
       <%= render 'website/partials/wizard_explainer' %>
     </div>
 
-    <div class='col-6 content'>
+    <div class='col-6 wizard-content'>
+      <h3 class='title-product'>
+        Representatives
+      </h3>
       <form>
         <h5 class='field'>
           Email
@@ -74,31 +77,27 @@
             <input type="text" class="form-control" id="inputZip">
           </div>
         </div>
+        <h5 class='field'>
+          Title
+        </h5>
         <div class="form-group">
-          <div class="form-row">
-            <h5 class='field'>
-              Title
-            </h5>
-            <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="inputText">
-            </div>
-            <h5 class='field'>
-              Intended Percentage Ownership
-            </h5>
-            <div class="form-group col-md-2">
-              <input type="number" class="form-control" id="inputNumber">
-            </div>
-          </div>
+          <input name='title' type="text" class="form-control" placeholder="Chief Executive Officer" required>
+        </div>
+        <h5 class='field'>
+          Intended Percentage Ownership
+        </h5>
+        <div class="form-group">
+          <input name='percentage' type="number" class="form-control" placeholder="100%" required>
         </div>
         <div class='row'>
           <a href='/'>
             + Add a Founder
           </a>
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-primary-wizard float-right">
           Back
         </button>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-primary-wizard float-right">
           Next
         </button>
         </form>
