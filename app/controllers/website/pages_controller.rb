@@ -84,6 +84,21 @@ module Website
     def step_15
     end
 
+    def mail_thanks
+    end
+
+    def mail_confirm
+    end
+
+    def mail_welcome
+    end
+
+    def mail_password_reset
+    end
+
+    def mail_application
+    end
+
     def home
       # @social_proofs = SocialProof.where(
       #   organization: @current_organization

@@ -1,7 +1,7 @@
 <%= render 'website/partials/secondary_header_genesis' %>
 <div class='container-fluid'>
   <div class='row'>
-    <div class='col-3 sidabar'>
+    <div class='col-3 sidabar' style='background-color:#032840;'>
       <%= render 'website/partials/wizard_explainer' %>
     </div>
 
@@ -43,14 +43,10 @@
           Cost includes the required state filing fee and courier processing.
         </p>
       </div>
-      <button type="submit" class="btn btn-primary-wizard float-right">
-        Back
-      </button>
-      <button type="submit" class="btn btn-primary-wizard float-right">
-        Next
-      </button>
+      <a class="btn btn-primary btn-block-steps float-right" href="/step_11" role="button">Next</a>
+      <a class="btn btn-primary btn-block-steps float-right" href="/step_9" role="button">Back</a>
     </div>
-    <div class='col-3 preview'>
+    <div class='col-3 preview' style='background-color:#F0F0F0;'>
       <%= render 'website/partials/wizard_preview' %>
     </div>
   </div>

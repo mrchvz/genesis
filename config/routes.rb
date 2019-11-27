@@ -43,6 +43,12 @@ Rails.application.routes.draw do
       get 'step_13'
       get 'step_14'
       get 'step_15'
+      get 'mail-thanks'
+      get 'mail-confirm'
+      get 'mail-welcome'
+      get 'mail-password-reset'
+      get 'mail-application'
+
 
 
     end

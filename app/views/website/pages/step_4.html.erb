@@ -1,7 +1,7 @@
 <%= render 'website/partials/secondary_header_genesis' %>
 <div class='container-fluid'>
   <div class='row'>
-    <div class='col-3 sidabar'>
+    <div class='col-3 sidabar' style='background-color:#032840;'>
       <%= render 'website/partials/wizard_explainer' %>
     </div>
 
@@ -73,16 +73,12 @@
         <div class="form-group">
           <input name='telephone' type="tel" class="form-control" placeholder="+1 (619) 165 1588" required>
         </div>
-        <button type="submit" class="btn btn-primary-wizard float-right">
-          Back
-        </button>
-        <button type="submit" class="btn btn-primary-wizard float-right">
-          Next
-        </button>
+        <a class="btn btn-primary btn-block-steps float-right" href="/step_5" role="button">Next</a>
+        <a class="btn btn-primary btn-block-steps float-right" href="/step_3" role="button">Back</a>
       </form>
     </div>
 
-    <div class='col-3 preview'>
+    <div class='col-3 preview' style='background-color:#F0F0F0;'>
       <%= render 'website/partials/wizard_preview' %>
     </div>
   </div>

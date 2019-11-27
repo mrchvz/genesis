@@ -1,7 +1,7 @@
 <%= render 'website/partials/secondary_header_genesis' %>
 <div class='container-fluid'>
   <div class='row'>
-    <div class='col-3 sidabar'>
+    <div class='col-3 sidabar' style='background-color:#032840;'>
       <%= render 'website/partials/wizard_explainer' %>
     </div>
     <div class='col-6 wizard-content'>
@@ -119,15 +119,11 @@
             <button class="btn btn-outline-secondary" type="button">Upload</button>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary-wizard float-right">
-          Back
-        </button>
-        <button type="submit" class="btn btn-primary-wizard float-right">
-          Next
-        </button>
+        <a class="btn btn-primary btn-block-steps float-right" href="/step_4" role="button">Next</a>
+        <a class="btn btn-primary btn-block-steps float-right" href="/step_2" role="button">Back</a>
       </form>
     </div>
-    <div class='col-3 preview'>
+    <div class='col-3 preview' style='background-color:#F0F0F0;'>
       <%= render 'website/partials/wizard_preview' %>
     </div>
   </div>
