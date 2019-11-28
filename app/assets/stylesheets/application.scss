@@ -280,16 +280,32 @@ body {
     }
   }
   .dashboard {
-    .location {
-      margin: $breath-size/2 Opx;
-    }
-    .map {
-      align-items: center;
-    }
-    .image {
-      height:20px;
-      width:20px;
-      margin-right: 10pt;
+    .wrapper-dashboard {
+      margin-top: $breath-size;
+      margin-bottom: $breath-size;
+      .quicklinks {
+        margin-top: $breath-size/4;
+        margin-bottom: 0px;
+      }
+      .processes-map {
+        margin-bottom: $breath-size/2;
+        .map {
+          width: 300px;
+          height: 300px;
+        }
+      }
+
+      .location {
+        margin: $breath-size/2 Opx;
+      }
+      .map {
+        align-items: center;
+      }
+      .image {
+        height:20px;
+        width:20px;
+        margin-right: 10pt;
+      }
     }
   }
   .step-1 {

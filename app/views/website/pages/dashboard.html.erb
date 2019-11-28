@@ -1,13 +1,10 @@
 <%= render 'website/partials/secondary_header_genesis' %>
 <div class='container wrapper-dashboard'>
   <div class='row processes'>
-    <div class='col-12'>
+    <div class='col-12 quicklinks'>
       <h2 class='title'>
         Processes
       </h2>
-      <a href='/step_1'>
-        New Process
-      </a>
       <h4 class='text'>
         Quicklinks
       </h4>
@@ -15,38 +12,46 @@
   </div>
   <div class='row processes-map'>
     <div class='col-3'>
-      <%= image_tag 'california.svg', class:'map'%>
+      <%= image_tag 'california.png', class:'map'%>
     </div>
     <div class='col-3'>
-      <%= image_tag 'delaware.svg', class:'map'%>
+      <%= image_tag 'delaware.png', class:'map'%>
     </div>
     <div class='col-3'>
-      <%= image_tag 'mexico.svg', class:'map'%>
+      <%= image_tag 'mexico.png', class:'map'%>
     </div>
     <div class='col-3'>
-      <%= image_tag 'binational.svg', class:'map'%>
+      <%= image_tag 'binational.png', class:'map'%>
     </div>
   </div>
   <div class='row processes-map'>
     <div class='col-3'>
+      <a href='/step_1'>
       <h5 class='location text-center'>
         California Incorporation
       </h5>
+      </a>
     </div>
     <div class='col-3'>
+      <a href='/step_1'>
       <h5 class='location text-center'>
         Delaware Incorporation
       </h5>
+      </a>
     </div>
     <div class='col-3'>
+      <a href='/step_1'>
       <h5 class='location text-center'>
         Mexico Incorporation
       </h5>
+      </a>
     </div>
     <div class='col-3'>
+      <a href='/step_1'>
       <h5 class='location text-center'>
         Binational Incorporation
       </h5>
+      </a>
     </div>
   </div>
 
@@ -108,4 +113,3 @@
     </tbody>
   </table>
 </div>
-<%= render 'website/partials/secondary_footer_genesis' %>
