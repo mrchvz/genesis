@@ -64,6 +64,20 @@ body {
     margin-bottom: 0px;
   }
 
+  .subtitle-wizard {
+    font-family: 'Muli';
+    font-size: 14pt;
+    margint-bottom: 0px;
+  }
+  .explainer-wizard {
+    font-family: 'Muli';
+    font-size: 12pt;
+  }
+  .disclaimer, .unsubscribe {
+    font-family: 'Muli';
+    font-size: 11pt;
+  }
+
   .btn-primary, .btn-block-steps {
     background-color: $blue-medium;
     border: none;
@@ -87,7 +101,15 @@ body {
     background-color: $light-gray;
     border: none;
     font-family: 'Muli';
-
+  }
+  .btn-confirm {
+    margin: 10px 0px;
+    width: 35%;
+  }
+  .mail-image {
+    width: 105px;
+    height: 105px;
+    text-align: center;
   }
 
 }
@@ -116,11 +138,12 @@ body {
 }
 .secondary-header-genesis {
   background: #1C1C1C;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  // padding-top: 5px;
+  // padding-bottom: 5px;
   .image {
     width:25px;
     height:25px;
+    text-align: right;
   }
 }
 .mail-header {
@@ -152,7 +175,6 @@ body {
     font-size: 15px;
   }
 }
-
 .secondary-footer-genesis {
   background-color: #1C1C1C;
   color: white;
@@ -166,13 +188,20 @@ body {
 .wizard-explainer {
   color: white;
   padding: $breath-size $breath-size/2;
+  height: 1800px;
+  overflow-y: scroll;
+
 }
 .wizard-content {
   padding: $breath-size $breath-size/2;
+  height: 1800px;
+  overflow-y: scroll;
 }
 .wizard-preview {
   color: $dark-gray;
   padding: $breath-size $breath-size/2;
+  height: 1800px;
+  overflow-y: scroll;
 }
 
 .pages {
@@ -341,6 +370,7 @@ body {
 
       .summary-field {
         margin-bottom: 0px;
+        font-size: 12pt;
       }
       .btn-primary {
         margin: 20px auto;
@@ -367,21 +397,18 @@ body {
       }
     }
   }
-  .mail-thanks {
-    .wrapper-mail-thanks {
-      .image {
-        width: 75px;
-        height: 75px;
-        text-align: center;
+  .mail-confirm {
+    .wrapper-mail-confirm {
+      .title {
+        margin: 0px;
       }
     }
   }
-  .mail-confirm {
-    .wrapper-mail-confirm {
-      .image {
-        width: 175px;
-        height: 175px;
-        text-align: center;
+  .mail-application {
+    .wrapper-mail-application {
+      .unsubscribe {
+        margin-top: $breath-size;
+        color: $dark-gray;
       }
     }
   }

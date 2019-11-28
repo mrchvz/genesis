@@ -5,15 +5,12 @@
           <%= image_tag 'genesis-white-small.png', class:'logo'%>
         </a>
       </a>
-      <button class="navbar-toggler toggler ml-auto float-right" type="button" data-toggle="collapse" data-target="#navigation-bar" aria-controls="navigation-bar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navigation-bar">
-        <ul class="navbar-nav mr-auto menu-items">
-          <li class="nav-item active menu-item float-right">
+      <div class="navbar-nav flex-row ml-md-auto d-none d-md-flex" id="navigation-bar">
+        <ul class="navbar-nav menu-items">
+          <li class="nav-item active menu-item">
             <a class="nav-link link" href="/"><%= image_tag 'bell.png', class:'image'%></a>
           </li>
-          <li class="nav-item active menu-item float-right">
+          <li class="nav-item active menu-item ">
             <a class="nav-link link" href="/"><%= image_tag 'user.png', class:'image'%></a>
           </li>
         </ul>
