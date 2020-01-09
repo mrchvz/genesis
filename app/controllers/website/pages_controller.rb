@@ -99,6 +99,50 @@ module Website
     def mail_application
     end
 
+    def instances_plural
+    end
+
+    def instances_singular_draft
+    end
+
+    def instances_singular_submitted
+    end
+
+    def instances_singular_accepted
+    end
+
+    def instances_singular_rejected
+    end
+
+    def instances_singular_cancelled
+    end
+
+    def instances_singular_completed
+    end
+
+    def payments
+    end
+
+    def payment
+    end
+
+    def invoices
+    end
+
+    def invoice
+    end
+
+    def payment_methods
+    end
+
+    def payment_method_new
+    end
+
+    def payment_method_edit
+    end
+
+
+
     def home
       # @social_proofs = SocialProof.where(
       #   organization: @current_organization

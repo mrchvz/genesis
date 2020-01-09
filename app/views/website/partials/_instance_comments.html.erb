@@ -1,0 +1,22 @@
+<div class='container instance-comments'>
+  <div class='row wrapper-instance-comments'>
+    <div class='col-12'>
+      <h4 class='details'>
+        COMMENTS
+      </h4>
+      <h6 class='comment-description'>
+        check step 3
+      </h6>
+      <h5 class='datetime'>
+        Nov 28, 2019, 3:29 PM
+      </h5>
+      <form class='form' action="/submit_contact_form" method="post">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <div class="form-group">
+            <input name='name' type="text" class="form-control" placeholder="Type here">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+  </div>
+</div>

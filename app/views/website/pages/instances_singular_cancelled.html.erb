@@ -1,0 +1,23 @@
+<%= render 'website/partials/header_dashboard' %>
+<div class='container'>
+  <div class='row dashboard'>
+    <div class='col-3 sidebar'>
+      <%= render 'website/partials/dashboard_sidebar' %>
+    </div>
+    <div class='col-9 content'>
+      <h2 class='subtitle'>
+        Delaware Incorporation
+      </h2>
+      <h4 class='status'>
+        Form is incomplete
+      </h4>
+      <h5 class='disclaimer'>
+        Your application was cancelled at 1/1/1 1:11pm by Sergio Sufy for the following reasons:
+        "error 123", this status is not changeable, if you believe this was an error,
+        please contact support in the bottom right corner and provide them the identifier.
+      </h5>
+      <%= render 'website/partials/instance_history' %>
+    </div>
+  </div>
+</div>
+<%= render 'website/partials/footer_dashboard' %>

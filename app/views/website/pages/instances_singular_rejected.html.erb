@@ -1,0 +1,29 @@
+<%= render 'website/partials/header_dashboard' %>
+<div class='container'>
+  <div class='row dashboard'>
+    <div class='col-3 sidebar'>
+      <%= render 'website/partials/dashboard_sidebar' %>
+    </div>
+    <div class='col-9 content'>
+      <h2 class='subtitle'>
+        Delaware Incorporation
+      </h2>
+      <h4 class='status'>
+        Form is rejected
+      </h4>
+      <h5 class='disclaimer'>
+        Your application was rejected at 1/1/1, 1:11pm by Sergio Sufy for the following reasons:
+        "a, b,c " please note the offending fields have a blue border,
+        if you want to make further changes to this application and try again,
+        please click the edit button and submit again.
+      </h5>
+      <%= render 'website/partials/instance_details' %>
+      <%= render 'website/partials/instance_payment_methods' %>
+      <%= render 'website/partials/instance_payments' %>
+      <%= render 'website/partials/instance_invoices' %>
+      <%= render 'website/partials/instance_history' %>
+      <%= render 'website/partials/instance_comments' %>
+    </div>
+  </div>
+</div>
+<%= render 'website/partials/footer_dashboard' %>

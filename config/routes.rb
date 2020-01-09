@@ -48,9 +48,20 @@ Rails.application.routes.draw do
       get 'mail-welcome'
       get 'mail-password-reset'
       get 'mail-application'
-
-
-
+      get 'instances_plural'
+      get 'instances_singular_draft'
+      get 'instances_singular_submitted'
+      get 'instances_singular_accepted'
+      get 'instances_singular_rejected'
+      get 'instances_singular_cancelled'
+      get 'instances_singular_completed'
+      get 'payments'
+      get 'payment'
+      get 'invoices'
+      get 'invoice'
+      get 'payment_methods'
+      get 'payment_method_new'
+      get 'payment_method_edit'
     end
 
 

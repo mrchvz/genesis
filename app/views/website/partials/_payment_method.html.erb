@@ -1,0 +1,43 @@
+<div class='container payment-methods'>
+  <div class='row-cards'>
+    <%= image_tag 'visa.png', class:'image'%>
+    <%= image_tag 'mastercard.png', class:'image'%>
+    <%= image_tag 'amex.png', class:'image'%>
+    <%= image_tag 'jcb.png', class:'image'%>
+    <%= image_tag 'discover.png', class:'image'%>
+  </div>
+  <form>
+    <div class="row">
+      <div class="col-12">
+        <label for="cc-name">Name on Card</label>
+        <input type="text" class="form-control" id="cc-name" placeholder="" required>
+        <small class="text-muted">Full name as displayed on card</small>
+        <div class="invalid-feedback">
+          Name on Card
+        </div>
+      </div>
+      <div class="col-12">
+        <label for="cc-number">Credit Card Number</label>
+        <input type="text" class="form-control" id="cc-number" placeholder="" required>
+        <div class="invalid-feedback">
+          Credit Card Number
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 mb-3">
+        <label for="cc-expiration">Expiration</label>
+        <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+        <div class="invalid-feedback">
+          Expiration Date
+        </div>
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="cc-expiration">CVV</label>
+        <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+        <div class="invalid-feedback">
+          Security Code
+        </div>
+      </div>
+    </div>
+  </div>

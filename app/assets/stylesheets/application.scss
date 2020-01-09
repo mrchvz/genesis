@@ -73,7 +73,7 @@ body {
     font-family: 'Muli';
     font-size: 12pt;
   }
-  .disclaimer, .unsubscribe {
+  .disclaimer, .unsubscribe, .datetime {
     font-family: 'Muli';
     font-size: 11pt;
   }
@@ -202,6 +202,13 @@ body {
   padding: $breath-size $breath-size/2;
   height: 1800px;
   overflow-y: scroll;
+}
+.incorporation-table {
+  .image {
+    height:20px;
+    width:20px;
+    margin-right: 10pt;
+  }
 }
 
 .pages {

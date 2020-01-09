@@ -14,11 +14,11 @@ def png
   ChunkyPNG::Image.new(width, height, random_color).to_datastream.to_s
 end
 
-logo = File.read('./app/assets/images/movimiento-ciudadano-logo.jpg')
-
 def payload(file_content)
   "data:image/png;base64,#{Base64.encode64(file_content)}"
 end
+
+logo = payload(png)
 
 # ORGANIZATION
 organization = Organization.new(
