@@ -1,0 +1,57 @@
+<div cass='container bottom-row-admin'>
+  <div class='row wrapper-bottom-row-admin'>
+    <div class='col-4 rows-per-page'>
+      <div class="dropdown show">
+        Rows per page:
+        <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          10
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">
+            20
+          </a>
+          <a class="dropdown-item" href="#">
+            50
+          </a>
+          <a class="dropdown-item" href="#">
+            100
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class='col-8 page'>
+      <nav aria-label='pages'>
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+              <%= image_tag 'back.png', class:'image'%>
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">
+              1
+            </a>
+          </li>
+          <li class="page-item active" aria-current="page">
+            <a class="page-link" href="#">
+              2
+              <span class="sr-only">
+                (current)
+              </span>
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">
+              3
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">
+              <%= image_tag 'next.png', class:'image'%>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

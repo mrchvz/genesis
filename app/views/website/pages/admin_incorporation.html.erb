@@ -1,0 +1,40 @@
+<%= render 'website/partials/header_dashboard' %>
+<div class='container'>
+  <div class='row'>
+    <div class='col-3'>
+      <%= render 'website/partials/admin_sidebar' %>
+    </div>
+    <div class='col-9 content'>
+      <h4 class='subtitle'>
+        Incorporation
+      </h4>
+      <div class='row'>
+        <div class="form-group col-md-4">
+          <input type="text" class="form-control" id="inputID" placeholder="ID">
+        </div>
+        <div class="form-group col-md-5">
+          <input type="text" class="form-control" id="inputStatus" placeholder="Status">
+        </div>
+      </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="inputName" placeholder="Name">
+          <input type="text" class="form-control" id="inputDescription" placeholder="Description">
+          <h5 class='section'>
+            Company
+          </h5>
+          <input type="text" class="form-control" id="inputName" placeholder="Name">
+          <input type="text" class="form-control" id="inputCompany" placeholder="Type of Company">
+          <input type="text" class="form-control" id="inputFunding" placeholder="Funding">
+        </div>
+      </div>
+    </div>
+    <div class='row options float-right'>
+      <button type="button" class="btn btn-primary">
+        Go Back
+      </button>
+      <button type="button" class="btn btn-primary">
+        Save
+      </button>
+    </div>
+  </div>
+<%= render 'website/partials/footer_dashboard' %>

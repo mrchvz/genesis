@@ -1,0 +1,105 @@
+<%= render 'website/partials/header_dashboard' %>
+<div class='container'>
+  <div class='row'>
+    <div class='col-3'>
+      <%= render 'website/partials/admin_sidebar' %>
+    </div>
+    <div class='col-9'>
+      <div class='row dashboard-filter'>
+        <div class='col-5'>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Filter" aria-label="Filter" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-secondary" type="button">
+                +
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class='col-7'>
+          <button type="button" class="btn btn-primary float-right">
+            New
+          </button>
+        </div>
+      </div>
+      <table class="table table-sm table-borderless">
+        <thead>
+          <tr>
+            <th scope="col"><input type="checkbox" aria-label="Select"></th>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Company</th>
+            <th scope="col">Status</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+          </thead>
+        <tbody>
+          <tr>
+            <td scope="row"><input type="checkbox" aria-label="Select"></td>
+            <td>A-001A1</td>
+            <td>Delaware Incorporation</td>
+            <td>Company 1</td>
+            <td>Submitted</td>
+            <td><%= image_tag 'edit.png', class:'image'%></td>
+            <td><%= image_tag 'view.png', class:'image'%></td>
+            <td><%= image_tag 'delete.png', class:'image'%></td>
+          </tr>
+          <tr>
+            <td scope="row"><input type="checkbox" aria-label="Select"></td>
+            <td>A-001A1</td>
+            <td>Delaware Incorporation</td>
+            <td>Company 1</td>
+            <td>Submitted</td>
+            <td><%= image_tag 'edit.png', class:'image'%></td>
+            <td><%= image_tag 'view.png', class:'image'%></td>
+            <td><%= image_tag 'delete.png', class:'image'%></td>
+          </tr>
+          <tr>
+            <td scope="row"><input type="checkbox" aria-label="Select"></td>
+            <td>A-001A1</td>
+            <td>Delaware Incorporation</td>
+            <td>Company 1</td>
+            <td>Submitted</td>
+            <td><%= image_tag 'edit.png', class:'image'%></td>
+            <td><%= image_tag 'view.png', class:'image'%></td>
+            <td><%= image_tag 'delete.png', class:'image'%></td>
+          </tr>
+          <tr>
+            <td scope="row"><input type="checkbox" aria-label="Select"></td>
+            <td>A-001A1</td>
+            <td>Delaware Incorporation</td>
+            <td>Company 1</td>
+            <td>Submitted</td>
+            <td><%= image_tag 'edit.png', class:'image'%></td>
+            <td><%= image_tag 'view.png', class:'image'%></td>
+            <td><%= image_tag 'delete.png', class:'image'%></td>
+          </tr>
+          <tr>
+            <td scope="row"><input type="checkbox" aria-label="Select"></td>
+            <td>A-001A1</td>
+            <td>Delaware Incorporation</td>
+            <td>Company 1</td>
+            <td>Submitted</td>
+            <td><%= image_tag 'edit.png', class:'image'%></td>
+            <td><%= image_tag 'view.png', class:'image'%></td>
+            <td><%= image_tag 'delete.png', class:'image'%></td>
+          </tr>
+          <tr>
+            <td scope="row"><input type="checkbox" aria-label="Select"></td>
+            <td>A-001A1</td>
+            <td>Delaware Incorporation</td>
+            <td>Company 1</td>
+            <td>Submitted</td>
+            <td><%= image_tag 'edit.png', class:'image'%></td>
+            <td><%= image_tag 'view.png', class:'image'%></td>
+            <td><%= image_tag 'delete.png', class:'image'%></td>
+          </tr>
+        </tbody>
+      </table>
+      <%= render 'website/partials/pagination' %>
+    </div>
+  </div>
+</div>
+<%= render 'website/partials/footer_dashboard' %>

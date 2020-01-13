@@ -12,76 +12,66 @@ $breath-size: 120px;
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 body {
+  font-family: 'Muli', sans-serif;
   h1 {
-    font-family: 'Muli', sans-serif;
     font-weight: bold;
     font-size: 36pt;
   }
   h2 {
-    font-family: 'Muli', sans-serif;
     font-weight: 600;
     font-size: 30pt;
   }
 
   h3 {
-    font-family: 'Muli', sans-serif;
     font-weight: 600;
     font-size: 24pt;
   }
   h4 {
-    font-family: 'Muli', sans-serif;
     font-weight: 600;
     font-size: 21pt;
   }
   h5 {
-    font-family: 'Muli', sans-serif;
     font-weight: 300;
     font-size: 16pt;
   }
   h6 {
-    font-family: 'Muli', sans-serif;
     font-weight: 300;
     font-size: 15pt;
   }
   p {
-    font-family: 'Muli', sans-serif;
     font-weight: 200;
     font-size: 14pt;
   }
   a {
-    font-family: 'Muli', sans-serif;
     font-size: 11pt;
+    &:hover {
+      font-weight: bold;
+      text-decoration: none;
+    }
   }
-  table {
-    font-family: 'Muli';
-  }
-  ul, il {
-    font-family: 'Muli';
-  }
-
   label {
-    font-family: 'Muli';
     margin-bottom: 0px;
   }
 
+  table {
+    background-color: white;
+    border: red;
+  }
+
   .subtitle-wizard {
-    font-family: 'Muli';
     font-size: 14pt;
     margint-bottom: 0px;
   }
   .explainer-wizard {
-    font-family: 'Muli';
     font-size: 12pt;
   }
   .disclaimer, .unsubscribe, .datetime {
-    font-family: 'Muli';
     font-size: 11pt;
   }
 
   .btn-primary, .btn-block-steps {
     background-color: $blue-medium;
     border: none;
-    font-family: 'Muli';
     color: white;
       &:hover {
         font-weight: bolder;
@@ -100,7 +90,6 @@ body {
   .form-control {
     background-color: $light-gray;
     border: none;
-    font-family: 'Muli';
   }
   .btn-confirm {
     margin: 10px 0px;
@@ -113,6 +102,7 @@ body {
   }
 
 }
+
 .header-genesis {
   margin-bottom: 120px;
   .navbar-collapse {
@@ -190,7 +180,6 @@ body {
   padding: $breath-size $breath-size/2;
   height: 1800px;
   overflow-y: scroll;
-
 }
 .wizard-content {
   padding: $breath-size $breath-size/2;
@@ -210,6 +199,44 @@ body {
     margin-right: 10pt;
   }
 }
+.header-dashboard {
+  margin-bottom: $breath-size/4;
+  background-color: $dark-gray;
+  .image {
+    width: 20px;
+    height: 20px;
+  }
+}
+.admin-sidebar {
+  border-right: 2px solid $light-gray;
+  height: auto;
+  .link-list {
+    list-style-type: none;
+    .link {
+      padding-top: 10px;
+      a {
+        color: $dark-gray;
+      }
+    }
+  }
+}
+.bottom-row-admin {
+  .wrapper-bottom-row-admin {
+    .rows-per-page {
+      align-items: left;
+    }
+    .pages {
+      .pagination {
+        .page-item.active {
+          .page-link {
+            background-color: red;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 .pages {
   .contact {
@@ -432,6 +459,65 @@ body {
       .unsubscribe {
         margin-top: $breath-size;
         color: $dark-gray;
+      }
+    }
+  }
+  .admin-login {
+    .admin-login-form {
+      .form {
+        margin-left: auto;
+        margin-right:auto;
+        width: 40%;
+      }
+    }
+  }
+  .admin-incorporations {
+    .btn-primary {
+      background-color: $blue-sidebar;
+      &:hover {
+        background-color: $blue-sidebar;
+      }
+    }
+    .dashboard-filter {
+      .form-control {
+        background-color: #F8F8F8;
+      }
+      .btn-secondary {
+        background-color: white;
+        border: none;
+        color: $dark-gray;
+        margin: 0px;
+        position: absolute right;
+      }
+    }
+  }
+  .admin-incorporation {
+    .content {
+      .form-control {
+        margin-bottom: 20px;
+      }
+      .row-options {
+        .btn {
+          background-color: red;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .payment {
+    .content {
+      .header-title {
+        color: $blue-sidebar;
+      }
+      .billing-table-info {
+        border: 0px;
+      }
+      .billing-info {
+        .billing-info-field {
+          text-align: right;
+          margin-bottom: 0px;
+          font-size: 11pt;
+        }
       }
     }
   }

@@ -1,0 +1,39 @@
+<div class='container admin-login'>
+  <div class='row'>
+    <div class='col-12'>
+      <h2 class='title text-center'>
+        Log in to Genesis
+      </h2>
+    </div>
+  </div>
+  <div class='row admin-login-form'>
+    <div class='col-12 form'>
+      <form class='form' action="/submit_contact_form" method="post">
+        <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+          <div class="form-group">
+            <input name='email' type="email" class="form-control" placeholder="Email" id="inputEmail" required>
+          </div>
+          <div class="form-group">
+            <input name='password' type="password" class="form-control" placeholder="Password" id="inputPassword" required>
+          </div>
+          <a class="btn btn-primary btn-block" href="/dashboard" role="button">
+            Login
+          </a>
+        </form>
+      </div>
+    </div>
+    <div class='row text'>
+      <div class='col-12'>
+        <p class='text text-center link'>
+          Not a member yet?
+        <a href='/sign-up'>
+          Sign Up
+        </a>
+        <a href='/password-recover'>
+          Forgot Password?
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+<%= render 'website/partials/footer_dashboard' %>

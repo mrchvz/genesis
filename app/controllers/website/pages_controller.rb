@@ -141,7 +141,14 @@ module Website
     def payment_method_edit
     end
 
+    def admin_login
+    end
 
+    def admin_incorporations
+    end
+
+    def admin_incorporation
+    end
 
     def home
       # @social_proofs = SocialProof.where(

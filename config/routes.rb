@@ -62,6 +62,9 @@ Rails.application.routes.draw do
       get 'payment_methods'
       get 'payment_method_new'
       get 'payment_method_edit'
+      get 'admin_login'
+      get 'admin_incorporations'
+      get 'admin_incorporation'
     end
 
 
