@@ -3,53 +3,73 @@
     <div class='col-12'>
       <table class="table table-sm">
         <thead>
-          <tr>
-            <th scope="col">Incorporation</th>
-            <th scope="col">ID</th>
-            <th scope="col">Created Date</th>
-            <th scope="col">Status</th>
+          <tr class='table-header'>
+            <th scope="col">
+              <h6>
+                Incorporation
+              </h6>
+            </th>
+            <th scope="col">
+              <h6 class='text-center'>
+                ID
+              </h6>
+            </th>
+            <th scope="col">
+              <h6 class='text-center'>
+                Created Date
+              </h6>
+            </th>
+            <th scope="col">
+              <h6>
+                Status
+              </h6>
+            </th>
             <th scope="col"></th>
             <th scope="col"></th>
             <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr class='table-data'>
             <th scope="row"><%= image_tag 'folder.svg', class:'image'%>Delaware Incorporation</th>
-            <td>2-002</td>
-            <td>04/11/19</td>
+            <td class='id-date text-center'>2-002</td>
+            <td class='id-date text-center'>04/11/19</td>
             <td><%= image_tag 'complete.svg', class:'image'%> Complete</td>
-            <td><%= image_tag 'edit.svg', class:'image'%></td>
-            <td><%= image_tag 'view.svg', class:'image'%></td>
-            <td><%= image_tag 'print.svg', class:'image'%></td>
+            <td class='id-date text-center'>
+              <a href='/instances_singular_draft'>
+                <%= image_tag 'edit.svg', class:'image'%>
+              </a>
+            </td>
+            <td class='id-date text-center'><%= image_tag 'view.svg', class:'image'%></td>
+            <td class='id-date text-center'><%= image_tag 'print.svg', class:'image'%></td>
           </tr>
-          <tr>
+          <tr class='table-data'>
             <th scope="row"><%= image_tag 'folder.svg', class:'image'%>Binational Incorporation</th>
-            <td>4-001</td>
-            <td>04/11/19</td>
+            <td class='id-date text-center'>4-001</td>
+            <td class='id-date text-center'>04/11/19</td>
             <td><%= image_tag 'complete.svg', class:'image'%> Complete</td>
-            <td><%= image_tag 'edit.svg', class:'image'%></td>
-            <td><%= image_tag 'view.svg', class:'image'%></td>
-            <td><%= image_tag 'print.svg', class:'image'%></td>
+            <td class='id-date text-center'><%= image_tag 'edit.svg', class:'image'%></td>
+            <td class='id-date text-center'><%= image_tag 'view.svg', class:'image'%></td>
+            <td class='id-date text-center'><%= image_tag 'print.svg', class:'image'%></td>
 
           </tr>
-          <tr>
+          <tr class='table-data'>
             <th scope="row"><%= image_tag 'folder.svg', class:'image'%>Delaware Incorporation</th>
-            <td>2-003</td>
-            <td>04/11/19</td>
+            <td class='id-date text-center'>2-003</td>
+            <td class='id-date text-center'>04/11/19</td>
             <td><%= image_tag 'complete.svg', class:'image'%> Complete</td>
-            <td><%= image_tag 'edit.svg', class:'image'%></td>
-            <td><%= image_tag 'view.svg', class:'image'%></td>
-            <td><%= image_tag 'print.svg', class:'image'%></td>
+            <td class='id-date text-center'><%= image_tag 'edit.svg', class:'image'%></td>
+            <td class='id-date text-center'><%= image_tag 'view.svg', class:'image'%></td>
+            <td class='id-date text-center'><%= image_tag 'print.svg', class:'image'%></td>
           </tr>
-          <tr>
+          <tr class='table-data'>
             <th scope="row"><%= image_tag 'folder.svg', class:'image'%>Mexico Incorporation</th>
-            <td>3-001</td>
-            <td>04/11/19</td>
+            <td class='id-date text-center'>3-001</td>
+            <td class='id-date text-center'>04/11/19</td>
             <td><%= image_tag 'incomplete.svg', class:'image'%> Incomplete</td>
-            <td><%= image_tag 'edit.svg', class:'image'%></td>
-            <td><%= image_tag 'view.svg', class:'image'%></td>
-            <td><%= image_tag 'print.svg', class:'image'%></td>
+            <td class='id-date text-center'><%= image_tag 'edit.svg', class:'image'%></td>
+            <td class='id-date text-center'><%= image_tag 'view.svg', class:'image'%></td>
+            <td class='id-date text-center'><%= image_tag 'print.svg', class:'image'%></td>
           </tr>
         </tbody>
       </table>

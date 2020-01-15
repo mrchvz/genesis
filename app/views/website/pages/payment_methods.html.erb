@@ -1,6 +1,6 @@
 <%= render 'website/partials/header_dashboard' %>
-<div class='container'>
-  <div class='row dashboard'>
+<div class='container payment-methods'>
+  <div class='row wrapper-payment-methods'>
     <div class='col-3 sidebar'>
       <%= render 'website/partials/dashboard_sidebar' %>
     </div>
@@ -13,29 +13,26 @@
       </h5>
       <div class="accordion" id="accordionExample">
         <div class="card">
-          <div class="card-header" id="headingOne">
+          <div class="card-header">
             <h2 class="mb-0">
               <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 <%= image_tag 'mastercard.png', class:'image'%> Ending in 5487
               </button>
             </h2>
           </div>
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
-              <p>
+              <p class='field'>
                 Name
               </p>
-              <p>
+              <p class='field-info'>
                 John Doe
               </p>
-              <p>
+              <p class='field'>
                 Address
               </p>
               <p>
-                1052 Doreen Pl,
-              </p>
-              <p>
-                San Diego, California, United States
+                1052 Doreen Pl, San Diego, California, United States
               </p>
               <a href='/payment_method_edit'>
                 Edit
@@ -47,29 +44,26 @@
           </div>
         </div>
         <div class="card">
-          <div class="card-header" id="headingOne">
+          <div class="card-header">
             <h2 class="mb-0">
               <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 <%= image_tag 'mastercard.png', class:'image'%> Ending in 5487
               </button>
             </h2>
           </div>
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
-              <p>
+              <p class='field'>
                 Name
               </p>
-              <p>
+              <p class='field-info'>
                 John Doe
               </p>
-              <p>
+              <p class='field'>
                 Address
               </p>
               <p>
-                1052 Doreen Pl,
-              </p>
-              <p>
-                San Diego, California, United States
+                1052 Doreen Pl, San Diego, California, United States
               </p>
               <a href='/payment_method_edit'>
                 Edit
@@ -81,29 +75,26 @@
           </div>
         </div>
         <div class="card">
-          <div class="card-header" id="headingOne">
+          <div class="card-header">
             <h2 class="mb-0">
               <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 <%= image_tag 'mastercard.png', class:'image'%> Ending in 5487
               </button>
             </h2>
           </div>
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body">
-              <p>
+              <p class='field'>
                 Name
               </p>
-              <p>
+              <p class='field-info'>
                 John Doe
               </p>
-              <p>
+              <p class='field'>
                 Address
               </p>
               <p>
-                1052 Doreen Pl,
-              </p>
-              <p>
-                San Diego, California, United States
+                1052 Doreen Pl, San Diego, California, United States
               </p>
               <a href='/payment_method_edit'>
                 Edit
