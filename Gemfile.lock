@@ -123,7 +123,7 @@ GEM
       dotenv (= 2.6.0)
       railties (>= 3.2, < 6.0)
     erubi (1.8.0)
-    excon (0.62.0)
+    excon (0.71.0)
     execjs (2.7.0)
     faker (1.9.3)
       i18n (>= 0.7)
